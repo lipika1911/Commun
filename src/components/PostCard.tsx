@@ -16,7 +16,7 @@ import { Textarea } from './ui/textarea';
 type Posts = Awaited<ReturnType<typeof getPosts>>;
 type Post = Posts[number];
 
-function PostCard({post, dbUserId} : {post: Post; dbUserId: string | null}) {
+function PostCard({ post, dbUserId, canDelete }: { post: Post; dbUserId: string | null; canDelete?: boolean; }) {
     const {user} = useUser();
     const [newComment, setNewComment] = useState("");
     const [isCommenting, setIsCommenting] = useState(false);
@@ -100,7 +100,7 @@ function PostCard({post, dbUserId} : {post: Post; dbUserId: string | null}) {
                   </div>
                 </div>
                 {/* Check if current user is the post author */}
-                {dbUserId === post.author.id && (
+                {canDelete && (
                   <DeleteAlertDialog isDeleting={isDeleting} onDelete={handleDeletePost} />
                 )}
               </div>
