@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 📱 Commun - Social Media App
 
-First, run the development server:
+**Commun** is a modern, full-stack social media application built with cutting-edge tools like **Next.js**, **ShadCN UI**, **Prisma**, **Tailwind CSS**, and **Neon DB**. It provides a sleek and interactive user experience with authentication, image uploads, notifications, and social interactions.
+
+
+
+
+
+## 💻 Deployed App
+
+👉 [Try it live!](https://commun-social.vercel.app/)
+
+## 📸 Preview
+
+### 📌 Landing Page
+![Landing Page](./screenshots/landing.jpeg)
+
+### 📌 Profile Page
+![Profile Page](./screenshots/profile.jpeg)
+
+### 📌 Notifications Page
+![Notifications Page](./screenshots/notification.jpeg)
+
+## 🛠️ Tech Stack
+
+
+- **Frontend:** [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [ShadCN UI](https://ui.shadcn.com/)
+- **Backend:** [Prisma ORM](https://www.prisma.io/) with [Neon PostgreSQL](https://neon.tech/)
+- **Authentication:** [Clerk](https://clerk.dev/)
+- **File Uploads:** [UploadThing](https://uploadthing.com/)
+- **Database:** [Neon PostgreSQL](https://neon.tech/)                 
+
+
+
+
+## ✨ Features
+
+- 🔐 **Authentication:** Sign up / Sign in using Clerk
+- 👤 **User Profiles:** View and edit user profile pages
+- 🔁 **Follow System:** Follow and unfollow other users
+- 📝 **Posts:** Create and share posts with image support
+- ❤️ **Likes & Comments:** Interact with posts through likes and comments
+- 🔔 **Notifications:** Get notified for interactions like follows, likes, and comments
+
+
+## 📦 Installation Guide
+
+### ✅ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18 or later) – [Download](https://nodejs.org/)
+- **npm** or **yarn** – Comes with Node.js
+- **Git** – [Download](https://git-scm.com/)
+- **Clerk account** – [Create one](https://clerk.dev/)
+- **UploadThing account** – [Create one](https://uploadthing.com/)
+- **Neon PostgreSQL database** – [Create one](https://neon.tech/)
+- **Prisma CLI** (optional but recommended)
+
+```bash
+npm install -g prisma
+```
+
+### ⚙️ Clone the Repository
+
+```bash
+git clone https://github.com/lipika1911/Commun.git
+cd commun
+```
+
+### 🔌 Install Dependencies
+
+```bash
+npm install
+```
+
+### 📝 Environment Variables
+
+Create a .env file in the root directory and configure the following:
+
+```env
+DATABASE_URL = your_neon_db_url
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = your_clerk_publishable_key
+CLERK_SECRET_KEY = your_clerk_secret
+UPLOADTHING_TOKEN = your_uploadthing_app_id
+```
+
+### 📊 Setup Prisma
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+### 🏃 Run the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ✅ You’re all set!
+- Open http://localhost:3000 in your browser.
+- Register a new user and start using Commun!
+## 📬 Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For feedback, ideas, or collaborations, reach out:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 💻 **GitHub:** [lipika1911](https://github.com/lipika1911)
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the [MIT License](./LICENSE).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👩‍💻 About the Developer
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by [Lipika](https://github.com/lipika1911)
